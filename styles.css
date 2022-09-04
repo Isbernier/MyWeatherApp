@@ -15,11 +15,31 @@ body {
   opacity: 0.9;
 }
 
-h1,
-h2,
+h1 {
+  color: burlywood;
+  font-size: 26px;
+}
+
+h2 {
+  color: wheat;
+  font-size: 30px;
+}
+
 h3 {
   color: wheat;
+  font-size: 18px;
 }
+
+#localTime {
+  color: greenyellow;
+  font-family: Iceberg;
+}
+
+#destinationTime {
+  color: red;
+  font-family: Iceberg;
+}
+
 h4 {
   color: wheat;
 }

@@ -1,4 +1,4 @@
-//Date Formatting
+//Local time
 let now = new Date();
 let minutes = now.getMinutes();
 if (minutes < 10) minutes = "0" + minutes;
@@ -6,14 +6,32 @@ let hour = now.getHours();
 if (hour < 10) hour = "0" + hour;
 let day = now.getDay();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
 let weekDay = days[day];
+let month = now.getMonth();
+let months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+let monthName = months[month];
 
-let formattedDate = `Local Time: ${weekDay}, ${hour}:${minutes}`;
+let dayCalendar = now.getDate();
+if (dayCalendar < 10) dayCalendar = "0" + dayCalendar;
 
-let h3 = document.querySelector("#currentTime");
+let formattedDate = `Your present time is ${weekDay}. ${monthName}. ${dayCalendar}, 1985 at ${hour}h${minutes}min`;
+
+let h3 = document.querySelector("#localTime");
 h3.innerHTML = formattedDate;
-//end of date formatting
+//end of local time
 
 //Right Now Temperature
 function showTemperature(response) {
