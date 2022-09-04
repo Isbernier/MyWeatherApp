@@ -1,7 +1,9 @@
 body {
   font-family: "Mouse Memoirs", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
-  color: wheat;
+  color: white;
+  background-color: gray;
+  background-image: url(images/background.jpg);
 }
 .container {
   max-width: 700px;
@@ -10,6 +12,7 @@ body {
   padding: 15px;
   border-radius: 10px;
   background-color: #1d2856;
+  opacity: 0.9;
 }
 
 h1,

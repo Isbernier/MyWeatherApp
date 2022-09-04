@@ -9,7 +9,7 @@ let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 let weekDay = days[day];
 
-let formattedDate = `Current Local Time ${weekDay}, ${hour}:${minutes}`;
+let formattedDate = `Local Time: ${weekDay}, ${hour}:${minutes}`;
 
 let h3 = document.querySelector("#currentTime");
 h3.innerHTML = formattedDate;
