@@ -19,29 +19,31 @@
   </head>
   <body>
     <div class="container">
-    <h1>Isa's Weather App</h1>
-    </br>
-        <form id="search-form">
+      <h1>Isa's Weather App</h1>
+      <form id="search-form">
       <input
         type="text"
         placeholder="Enter a city"
         autocomplete="off"
         autofocus="off"
         id="search-text-input"
-      />
-      <input type="submit" value="Search"/>
-    </form>
-       
+        />
+        <input 
+        class="button"
+        type="submit" 
+        value="Search"/>
+        </form>
+    </div>
+  </container>
     <br>
+  <div class="container">
     <div class="row">
-    <hr/>
-    <div class="col-sm-2"><h2 id="h2city">City</h2></div>
-  
- 
-  </div>
+    <div class="col-sm-2"><h2 id="h2city">City</h2>
+    </div>
+   </div>
   <div class="row">
     <div class="col">
-      <h3 id="currentTime">Today</h3>
+      <h3 id="currentTime">Current Local Time</h3>
     </div>
     </div>
     <div class="row">
@@ -72,17 +74,11 @@
        UV index: 9
     </div>
   </div> 
-</br>
-      <div class="row">
-          <div class="col"><h4>Dress Code Advice for Today:</h4></div>
-          <div class="row">
-          <div class="col"> <em> Light and breathable clothes; do not forget your sunscreen 😀</em> </div>
-          </div>
-    </div>
-
+</div>
+</div>
 <br>
 
-    <hr>
+  <div class="container">
         <h3>Forecast for the Next 5 Days</h3>
       <div class="row">
         <div class="col"><h4>Tomorrow</h4> </div>
@@ -124,20 +120,22 @@
         
         <div class="col">Min 19ºC</div>
       </div>      
-      <hr>  
-    </div>  
-      <div class="container">    
-        <a href="https://github.com/Isbernier/MyWeatherApp" target="blank"
+    </div>
+  </div>
+</div>
+<br>  
+  <div class="container">    
+    <a href="https://github.com/Isbernier/MyWeatherApp" target="blank"
         class="link"
         >Open-source code</a>
         by
-        <a
+    <a
           href="https://www.linkedin.com/in/isbernier"
           target="_blank"
           class="link"
           >Isabelle Bernier</a>
-        </div>
-  </div>
-  </body>
-  <script src="project.js"></script>
+    </div>
+</div>
+</body>
+<script src="project.js"></script>
 </html>

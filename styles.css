@@ -1,54 +1,55 @@
 body {
   font-family: "Mouse Memoirs", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
-  background-color: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  color: wheat;
 }
 .container {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 0;
+  max-width: 700px;
   min-width: 360px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #1d2856;
 }
 
 h1,
 h2,
 h3 {
-  color: #a33434;
+  color: wheat;
 }
 h4 {
-  color: #e46161;
+  color: wheat;
 }
 img {
   max-width: 100%;
   height: auto;
 }
 hr {
-  color: #e46161;
+  color: wheat;
 }
 input::placeholder {
-  font-weight: bold;
-  opacity: 0.5;
-  color: red;
+  opacity: 1;
+  color: #1d2856;
 }
 
 input {
-  margin: 20px auto;
+  margin: 10px auto;
   display: inline;
-  color: #885df1;
+  color: #1d2856;
   font-size: 16px;
-  background: transparent;
-  padding: 15px 20px;
-  border-radius: 30px;
-  border: 1px solid #885df1;
-  box-shadow: 2px 5px 5px #885df1;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #1d2856;
+  box-shadow: 1px 2px 2px;
   transition: all 200ms ease;
 }
-button.hover {
-  background: #885df1;
-  color: gray;
-  cursor: pointer;
+.button {
+  background: gold;
+  color: #1d2856;
+}
+
+.button:hover {
+  background: rgb(255, 115, 0);
+  color: #1d2856;
 }
