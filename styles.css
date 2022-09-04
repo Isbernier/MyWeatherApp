@@ -7,6 +7,13 @@ body {
     rgb(160, 199, 254) 74.6%
   );
 }
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 360px;
+}
+
 h1,
 h2,
 h3 {
@@ -23,9 +30,9 @@ hr {
   color: #e46161;
 }
 input::placeholder {
-    font-weight: bold;
-    opacity: .5;
-    color: grey;
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
 }
 
 input {
@@ -37,7 +44,7 @@ input {
   padding: 15px 20px;
   border-radius: 30px;
   border: 1px solid #885df1;
-  box-shadow: 2px 5px 5px #885df1; 20%;
+  box-shadow: 2px 5px 5px #885df1;
   transition: all 200ms ease;
 }
 button.hover {

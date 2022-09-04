@@ -18,8 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto+Condensed&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>What's the Weather Like? </h1>
-  </br>
+    <div class="container">
+    <h1>Isa's Weather App</h1>
+    </br>
         <form id="search-form">
       <input
         type="text"
@@ -31,43 +32,42 @@
       <input type="submit" value="Search"/>
     </form>
        
-  <br>
-<div class="row">
+    <br>
+    <div class="row">
     <hr/>
-  <div class="col-sm-2"><h2 id="h2city">Enter a city</h2></div>
+    <div class="col-sm-2"><h2 id="h2city">City</h2></div>
   
-</div>
+ 
+  </div>
   <div class="row">
     <div class="col">
-      <h3 id="today">Today</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-8"><left><img src="images/sunny.png" alt="sunny" width="80px" class=".d-sm-flex"/></div>
-    <div class="col-2">
-      <h4>Max 39ºC</h4>
-    </div>
-    <div class="col-2">
-      <h4>Min 22ºC</h4>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-2" id="rightNow">
-      Right now: 35ºC
-    </div>
-    <div class="col-2">
-      Feels like: 36ºC
-    </div>
-   </div>
-  <div class="row">
-       <div class="col-2">
-      Humidity 21%
-    </div> 
-    <div class="col-2">
-      0% of rain
+      <h3 id="currentTime">Today</h3>
     </div>
     </div>
     <div class="row">
+    <div class="col-sm-8"><left>
+      <img src="images/sunny.png" alt="sunny" width="80px" class=".d-sm-flex"/></div>
+    <div class="col-sm-8">
+      <h3 id="rightNow">
+      Right now: 35ºC </h3>
+      </div>
+      <div class="col-sm-8">
+      <h4>Max 39ºC</h4>
+      </div>
+      <div class="col-sm-8">
+      <h4>Min 22ºC</h4>
+    </div>
+ 
+     </div>
+      <div class="row">
+       <div class="col-2">
+      Humidity 21%
+      </div> 
+      <div class="col-2">
+      0% of rain
+      </div>
+      </div>
+      <div class="row">
         <div class="col-2">
        UV index: 9
     </div>
@@ -79,6 +79,9 @@
           <div class="col"> <em> Light and breathable clothes; do not forget your sunscreen 😀</em> </div>
           </div>
     </div>
+
+<br>
+
     <hr>
         <h3>Forecast for the Next 5 Days</h3>
       <div class="row">
@@ -122,22 +125,18 @@
         <div class="col">Min 19ºC</div>
       </div>      
       <hr>  
-      </div
-  
-      <div class="col-3"> 
-       <a href="https://github.com/Isbernier/MyWeatherApp" target="blank"
+    </div>  
+      <div class="container">    
+        <a href="https://github.com/Isbernier/MyWeatherApp" target="blank"
         class="link"
         >Open-source code</a>
         by
-      <a
+        <a
           href="https://www.linkedin.com/in/isbernier"
           target="_blank"
           class="link"
-        >Isabelle Bernier</a>
-        <br>
-        <div class="col-3">
-      
-    </div>
+          >Isabelle Bernier</a>
+        </div>
   </div>
   </body>
   <script src="project.js"></script>

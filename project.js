@@ -9,7 +9,7 @@ let weekDay = days[day];
 
 let formattedDate = `Today ${weekDay}, ${hour}:${minutes}`;
 
-let h3 = document.querySelector("#today");
+let h3 = document.querySelector("#currentTime");
 h3.innerHTML = formattedDate;
 //end of date
 
