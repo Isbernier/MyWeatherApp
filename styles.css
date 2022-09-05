@@ -1,78 +1,78 @@
 body {
-  font-family: "Mouse Memoirs", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
-  color: white;
-  background-color: gray;
-  background-image: url(images/background.jpg);
+    font-family: "Mouse Memoirs", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    background-color: gray;
+    background-image: url(images/background.jpg);
 }
 .container {
-  max-width: 700px;
-  min-width: 360px;
-  margin: 0 auto;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #1d2856;
-  opacity: 0.9;
+    max-width: 600px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #1d2856;
+    opacity: 0.93;
 }
 
 h1 {
-  color: burlywood;
-  font-size: 26px;
+    color: white;
+    font-size: 26px;
 }
 
 h2 {
-  color: wheat;
-  font-size: 30px;
+    color: white;
+    font-size: 30px;
 }
 
 h3 {
-  color: wheat;
-  font-size: 18px;
+    color: white;
+    font-size: 20px;
+    display: inline;
 }
 
 #localTime {
-  color: greenyellow;
-  font-family: Iceberg;
+    color: greenyellow;
+    font-family: Iceberg;
+    font-size: 25px;
 }
 
 #destinationTime {
-  color: red;
-  font-family: Iceberg;
+    color: red;
+    font-family: Iceberg;
+    font-size: 25px;
 }
 
 h4 {
-  color: wheat;
+    color: white;
 }
 img {
-  max-width: 100%;
-  height: auto;
+    display: inline;
 }
-hr {
-  color: wheat;
-}
+
 input::placeholder {
-  opacity: 1;
-  color: #1d2856;
+    opacity: 1;
+    color: #1d2856;
 }
 
 input {
-  margin: 10px auto;
-  display: inline;
-  color: #1d2856;
-  font-size: 16px;
-  background: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: 1px solid #1d2856;
-  box-shadow: 1px 2px 2px;
-  transition: all 200ms ease;
+    margin: 10px auto;
+    display: inline;
+    color: #1d2856;
+    font-size: 16px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #1d2856;
+    box-shadow: 1px 2px 2px;
+    transition: all 200ms ease;
 }
 .button {
-  background: gold;
-  color: #1d2856;
+    background: white;
+    color: #1d2856;
 }
 
 .button:hover {
-  background: rgb(255, 115, 0);
-  color: #1d2856;
+    background: lightblue;
+    color: rgb(252, 111, 134);
 }

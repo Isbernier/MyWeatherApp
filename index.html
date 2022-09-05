@@ -23,55 +23,78 @@
   <body>
     <br>
     <div class="container">
-      <h1>Welcome to Isa's Weather Website!</h1>
-        <div class="row">
-    <div class="col">
-      <h3 id="localTime">Your Local Time:</h3>
-    </div>
-    </div>
-      <form id="search-form">
-      <input
+      <div class="search-field">
+        <h1>Welcome!</h1>
+        <form id="search-form">
+        <input
         type="text"
-        placeholder="Enter a city"
+        placeholder="Enter a destination"
         autocomplete="off"
         autofocus="off"
-        id="search-text-input"
-        />
+        id="search-text-input"/>
         <input 
         class="button"
         type="submit" 
-        value="Search"/>
+        value="Let's Go!"/>
         </form>
-        
+      </div>
     </div>
-  </container>
-    <br>
+<br>
   <div class="container">
-    <div class="row">
-    <div class="col-sm-2"><h2 id="h2city">City</h2>
+    <div class="clock">
+      <h2 id="localTime">Local Time:</h2>
+      <h2 id="destinationTime">Destination Time:</h2>
     </div>
-   </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="weather-app">
+      <row>
+        <div class="col-6">
+          <h2 id="h2city">City</h2>
+          <ul>
+            <li>
+              <span> Max 35º / Min 18º
+              </span>
+            </li>
+            <li>
+              <span>Humidity 70%</span>
+            </li>
+            <li>
+              <span>0% of rain</span>
+            </li>
+          </ul>
+        </div>
+      </row>
+      
+
+    </div>
+  </div>
+  
+  
+  
   <div class="row">
-    <div class="col">
-      <h3 id="destinationTime">Destination Time:</h3>
-    </div>
+      
     </div>
     <div class="row">
-    <div class="col-sm-8">
-      <img src="images/sunny.png" alt="sunny" width="80px" class=".d-sm-flex"/></div>
-    <div class="col-sm-8">
-      <h3 id="rightNow">
-      Right now: 35ºC </h3>
-      </div>
-      <div class="col-sm-8">
-      <h4>Max 39ºC</h4>
-      </div>
-      <div class="col-sm-8">
-      <h4>Min 22ºC</h4>
+    
     </div>
- 
-     </div>
-      <div class="row">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>Right now: 35ºC / ºF 
+          </li>
+          <li>Max 39ºC
+          </li>
+          <li>Min 22ºC
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <img src="images/sunny.png" alt="sunny" width=50px/>
+      </div>
+    </div>
+    <div class="row">
        <div class="col-2">
       Humidity 21%
       </div> 
@@ -79,27 +102,22 @@
       0% of rain
       </div>
       </div>
-      <div class="row">
-        <div class="col-2">
-       UV index: 9
     </div>
-  </div> 
-</div>
+  </div>
 </div>
 <br>
 
   <div class="container">
-        <h3>Forecast for the Next 5 Days</h3>
       <div class="row">
-        <div class="col"><h4>Tomorrow</h4> </div>
+        <div class="col"><h4>Sun</h4> </div>
         
-        <div class="col"><h4>Monday</h4></div>
+        <div class="col"><h4>Mon</h4></div>
         
-        <div class="col"><h4>Tuesday</h4> </div>
+        <div class="col"><h4>Tue</h4> </div>
         
-        <div class="col"><h4>Wednesday</h4></div>
+        <div class="col"><h4>Wed</h4></div>
         
-        <div class="col"><h4>Thursday</h4></div>
+        <div class="col"><h4>Thu</h4></div>
         </div>
        <div class="row">
         <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
@@ -109,26 +127,15 @@
         <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
        </div>
          <div class="row">
-        <div class="col">Max 39ºC</div>
+        <div class="col">39º / 19º</div>
         
-        <div class="col">Max 40ºC</div>
+        <div class="col">40º / 20º</div>
         
-        <div class="col">Max 41ºC</div>
+        <div class="col">41º / 21º</div>
         
-        <div class="col">Max 42ºC</div>
+        <div class="col">42º / 22º</div>
         
-        <div class="col">Max 39ºC</div>
-      </div>
-        <div class="row">
-        <div class="col">Min 19ºC</div>
-        
-        <div class="col">Min 19ºC</div>
-        
-        <div class="col">Min 19ºC</div>
-        
-        <div class="col">Min 19ºC</div>
-        
-        <div class="col">Min 19ºC</div>
+        <div class="col">39º / 19º</div>
       </div>      
     </div>
   </div>
