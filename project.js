@@ -24,18 +24,16 @@ let months = [
 ];
 let monthName = months[month];
 let year = now.getFullYear();
-
 let dayCalendar = now.getDate();
 if (dayCalendar < 10) dayCalendar = "0" + dayCalendar;
-
 let formattedDate = `Local time: ${weekDay}. ${monthName}. ${dayCalendar}, ${year} ${hour}h${minutes}min`;
-
 let h3 = document.querySelector("#localTime");
 h3.innerHTML = formattedDate;
 //end of local time
 
-//Right-Now Temperature
 function showTemperature(response) {
+    let cityElement = document.querySelector("#city");
+    cityElement.innerHTML = response.data.name;
     let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = response.data.weather[0].description;
     let maxTempElement = document.querySelector("#max-temp");
@@ -59,25 +57,44 @@ function showTemperature(response) {
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
+    celsiusTemp = Math.round(response.data.main.temp);
 }
 
-//city searched in form
-function searchCity(event) {
-    event.preventDefault();
-
-    let citySearched = document.querySelector("#search-text-input");
-    citySearched = citySearched.value;
-
-    let city = document.querySelector("#city");
-    city.innerHTML = citySearched;
-
-    //API
+function search(city) {
     let units = "metric";
     let apiKey = "b0684348b73ea07b122cc59301878b16";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearched}&appid=${apiKey}&units=${units}`;
-
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showTemperature);
 }
 
-let city = document.querySelector("#search-form");
-city.addEventListener("submit", searchCity);
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
+
+function showFahrenheitTemp(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature-now");
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsiusTemp(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature-now");
+    temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
+search("Madrid");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);

@@ -4,7 +4,6 @@ body {
     color: white;
     background-color: gray;
     background-image: url(images/background.jpg);
-    background-repeat: no-repeat;
     background-size: 100%;
 }
 .container {
@@ -13,8 +12,18 @@ body {
     margin: 0 auto;
     padding: 15px;
     border-radius: 10px;
-    background-color: #636161;
     opacity: 0.96;
+    background-color: #636161;
+}
+
+.temperature-container .active {
+    color: rgb(252, 111, 134);
+    text-decoration: none;
+}
+
+.temperature-container .passive {
+    color: lightblue;
+    text-decoration: none;
 }
 
 h1 {
@@ -40,18 +49,19 @@ input {
     padding: 5px 10px;
     border-radius: 10px;
     border: 1px solid #636161;
-    box-shadow: 1px 2px 2px;
     transition: all 200ms ease;
 }
 
 .button {
     background: lightblue;
-    color: #636161;
+    color: rgb(252, 111, 134);
+    border: 1px solid lightblue;
 }
 
 .button:hover {
     background: rgb(252, 111, 134);
-    color: #636161;
+    color: lightblue;
+    font-weight: bold;
 }
 
 h2 {
@@ -103,7 +113,8 @@ img {
 
 .units {
     position: relative;
-    top: -30px;
+    top: -25px;
+    font-size: 25px;
 }
 
 h4 {

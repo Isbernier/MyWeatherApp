@@ -26,15 +26,15 @@
         <h1>Welcome!</h1>
         <form id="search-form">
         <input
-        type="text"
+        type="search"
         placeholder="Enter a destination"
         autocomplete="off"
         autofocus="off"
-        id="search-text-input"/>
+        id="city-input"/>
         <input 
         class="button"
         type="submit" 
-        value="Let's Go!"/>
+        value="Go!"/>
         </form>
       </div>
     </div>
@@ -70,10 +70,9 @@
             </div>
           <div class="col">
             <div class="temperature-container">
-              <img src="" alt="" id="icon" width="100px">
-            </div>
+            <img src="" alt="" id="icon" width="100px">
             <span class="temperature" id="temperature-now">?</span>
-            <span class="units">ºC / <a href="#">ºF</a></span>
+            <span class="units"><a href="#" id="celsius-link" class="active">ºC</a> / <a href="#" id="fahrenheit-link" class="passive">ºF</a></span>
           </div>
         </div>        
       </div>
