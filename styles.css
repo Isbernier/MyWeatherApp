@@ -37,6 +37,7 @@ input {
     border: 1px solid #1d2856;
     box-shadow: 1px 2px 2px;
     transition: all 200ms ease;
+    text-transform: capitalize;
 }
 .button {
     background: white;
@@ -72,6 +73,9 @@ h3 {
     font-size: 20px;
     display: block;
 }
+#city {
+    text-transform: uppercase;
+}
 
 ul {
     list-style: none;
@@ -86,7 +90,7 @@ img {
     font-size: 60px;
 }
 
-.unit {
+.units {
     position: relative;
     top: -30px;
 }

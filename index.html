@@ -50,17 +50,18 @@
       <div class="weather-app">
         <row>
           <div class="col">
-            <h2 id="h2city">City</h2>
+            <h2 id="city">City</h2>
             <ul>
               <li>
-                <span> Max 35º / Min 18º
+                <span id="max-temp"> Max 35º /</span>
+                <span id="min-temp"> Min 18º
                 </span>
               </li>
               <li>
-                <span>Humidity 70%</span>
+                <span id="humidity">Humidity %</span>
               </li>
               <li>
-                <span>0% of rain</span>
+                <span id="real-feel">Feels like: º</span>
               </li>
             </ul>
             </div>
@@ -68,8 +69,8 @@
             <div class="temperature-container">
               <img src="images/sunny.png" alt="sun", width="40px">
             </div>
-            <span class="temperature">25</span>
-            <span class="unit">ºC / <a href="#">ºF</a></span>
+            <span class="temperature" id="temperature-now">25</span>
+            <span class="units">ºC / <a href="#">ºF</a></span>
           </div>
         </div>        
       </div>

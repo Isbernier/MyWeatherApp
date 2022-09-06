@@ -34,11 +34,14 @@ let h3 = document.querySelector("#localTime");
 h3.innerHTML = formattedDate;
 //end of local time
 
-//Right Now Temperature
+//Right-Now Temperature
 function showTemperature(response) {
+    let temperatureElement = document.querySelector("#temperature-now");
     let temperature = Math.round(response.data.main.temp);
-    let temperatureElement = document.querySelector("#rightNow");
-    temperatureElement.innerHTML = `Right now: ${temperature}ºC`;
+    temperatureElement.innerHTML = `${temperature}`;
+    let humidityElement = document.querySelector("#humidity");
+    let humidity = response.data.main.humidity;
+    humidityElement.innerHTML = `Humidity: ${humidity}%`;
 }
 
 //city searched in form
@@ -48,8 +51,8 @@ function searchCity(event) {
     let citySearched = document.querySelector("#search-text-input");
     citySearched = citySearched.value;
 
-    let h2city = document.querySelector("#h2city");
-    h2city.innerHTML = citySearched;
+    let city = document.querySelector("#city");
+    city.innerHTML = citySearched;
 
     //API
     let units = "metric";
@@ -59,5 +62,5 @@ function searchCity(event) {
     axios.get(apiUrl).then(showTemperature);
 }
 
-let h2city = document.querySelector("#search-form");
-h2city.addEventListener("submit", searchCity);
+let city = document.querySelector("#search-form");
+city.addEventListener("submit", searchCity);
