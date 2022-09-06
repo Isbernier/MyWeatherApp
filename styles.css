@@ -72,6 +72,7 @@ h3 {
     font-size: 20px;
     display: block;
 }
+
 #city:first-letter {
     text-transform: capitalize;
 }
@@ -81,6 +82,11 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+li:first-letter {
+    text-transform: capitalize;
+}
+
 img {
     display: inline;
 }

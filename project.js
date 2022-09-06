@@ -36,6 +36,8 @@ h3.innerHTML = formattedDate;
 
 //Right-Now Temperature
 function showTemperature(response) {
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = response.data.weather[0].description;
     let maxTempElement = document.querySelector("#max-temp");
     let maxTemp = Math.round(response.data.main.temp_max);
     maxTempElement.innerHTML = `Max: ${maxTemp}º`;
@@ -51,6 +53,12 @@ function showTemperature(response) {
     let temperatureElement = document.querySelector("#temperature-now");
     let temperature = Math.round(response.data.main.temp);
     temperatureElement.innerHTML = `${temperature}`;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 //city searched in form
