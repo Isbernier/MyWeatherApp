@@ -36,12 +36,21 @@ h3.innerHTML = formattedDate;
 
 //Right-Now Temperature
 function showTemperature(response) {
-    let temperatureElement = document.querySelector("#temperature-now");
-    let temperature = Math.round(response.data.main.temp);
-    temperatureElement.innerHTML = `${temperature}`;
+    let maxTempElement = document.querySelector("#max-temp");
+    let maxTemp = Math.round(response.data.main.temp_max);
+    maxTempElement.innerHTML = `Max: ${maxTemp}º`;
+    let minTempElement = document.querySelector("#min-temp");
+    let minTemp = Math.round(response.data.main.temp_min);
+    minTempElement.innerHTML = `Min: ${minTemp}º`;
     let humidityElement = document.querySelector("#humidity");
     let humidity = response.data.main.humidity;
     humidityElement.innerHTML = `Humidity: ${humidity}%`;
+    let feelsLikeElement = document.querySelector("#feels-like");
+    let feelsLike = Math.round(response.data.main.feels_like);
+    feelsLikeElement.innerHTML = `Feels like: ${feelsLike}º`;
+    let temperatureElement = document.querySelector("#temperature-now");
+    let temperature = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = `${temperature}`;
 }
 
 //city searched in form
