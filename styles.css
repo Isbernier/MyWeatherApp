@@ -22,30 +22,36 @@ h1 {
     font-size: 26px;
 }
 input::placeholder {
+    border: 0;
     opacity: 1;
-    color: #1d2856;
+    color: #636161;
+}
+
+input:focus {
+    outline: none;
 }
 
 input {
     margin: 10px auto;
     display: inline;
-    color: #1d2856;
+    color: #636161;
     font-size: 16px;
     background: white;
     padding: 5px 10px;
     border-radius: 10px;
-    border: 1px solid #1d2856;
+    border: 1px solid #636161;
     box-shadow: 1px 2px 2px;
     transition: all 200ms ease;
 }
+
 .button {
-    background: white;
-    color: #1d2856;
+    background: lightblue;
+    color: #636161;
 }
 
 .button:hover {
-    background: lightblue;
-    color: rgb(252, 111, 134);
+    background: rgb(252, 111, 134);
+    color: #636161;
 }
 
 h2 {
