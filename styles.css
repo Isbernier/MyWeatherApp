@@ -4,6 +4,8 @@ body {
     color: white;
     background-color: gray;
     background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .container {
     max-width: 600px;
@@ -11,45 +13,14 @@ body {
     margin: 0 auto;
     padding: 15px;
     border-radius: 10px;
-    background-color: #1d2856;
-    opacity: 0.93;
+    background-color: #636161;
+    opacity: 0.96;
 }
 
 h1 {
     color: white;
     font-size: 26px;
 }
-
-h2 {
-    color: white;
-    font-size: 30px;
-}
-
-h3 {
-    color: white;
-    font-size: 20px;
-    display: inline;
-}
-
-#localTime {
-    color: greenyellow;
-    font-family: Iceberg;
-    font-size: 25px;
-}
-
-#destinationTime {
-    color: red;
-    font-family: Iceberg;
-    font-size: 25px;
-}
-
-h4 {
-    color: white;
-}
-img {
-    display: inline;
-}
-
 input::placeholder {
     opacity: 1;
     color: #1d2856;
@@ -75,4 +46,51 @@ input {
 .button:hover {
     background: lightblue;
     color: rgb(252, 111, 134);
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+}
+
+h3 {
+    color: white;
+    font-size: 20px;
+    display: inline;
+}
+
+#localTime {
+    color: greenyellow;
+    font-family: "Kiwi Maru", serif;
+    font-size: 20px;
+    display: block;
+}
+
+#destinationTime {
+    color: red;
+    font-family: "Kiwi Maru", serif;
+    font-size: 20px;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: inline;
+}
+
+.temperature {
+    font-size: 60px;
+}
+
+.unit {
+    position: relative;
+    top: -30px;
+}
+
+h4 {
+    color: white;
 }
