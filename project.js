@@ -31,6 +31,31 @@ let h3 = document.querySelector("#localTime");
 h3.innerHTML = formattedDate;
 //end of local time
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#weather-forecast");
+
+    let forecastHTML = `<div class="row">`;
+    let days = ["Thu", "Fri", "Sat"];
+    days.forEach(function (day) {
+        forecastHTML =
+            forecastHTML +
+            `
+      <div class="col-2">
+        <div class="weather-forecast-date">
+          Mon
+        </div>
+        <div class="weather-forecast-icons">
+          <img src="images/sunny.png"alt="sunny" width="30px" />
+        </div>
+        <div class="weather-forecast-temp">
+          <span class="weather-forecast-temp-max">39º/</span><span class="weather-forecast-temp-min">19º</span>
+      </div>
+    `;
+        forecastHTML = forecastHTML + `</div>`;
+        forecastElement.innerHTML = forecastHTML;
+    });
+}
+
 function showTemperature(response) {
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
@@ -51,7 +76,7 @@ function showTemperature(response) {
     let temperatureElement = document.querySelector("#temperature-now");
     let temperature = Math.round(response.data.main.temp);
     temperatureElement.innerHTML = `${temperature}`;
-    let iconElement = document.querySelector("#icon");
+    let iconElement = document.querySelector("#today-icon");
     iconElement.setAttribute(
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -89,6 +114,7 @@ function showCelsiusTemp(event) {
 let celsiusTemp = null;
 
 search("Madrid");
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

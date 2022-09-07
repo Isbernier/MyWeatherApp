@@ -127,10 +127,9 @@ img {
     font-size: 25px;
 }
 
-.weather-forecast {
-    margin-top: 20px;
+#weather-forecast {
+    margin-top: 0px;
     text-align: center;
-    color: white;
 }
 
 .weather-forecast-date {
