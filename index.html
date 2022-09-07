@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Isa's Weather App</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <br>
-    <div class="container">
-      <div class="search-field">
-        <h1>Welcome!</h1>
-        <form id="search-form">
-        <input
-        type="search"
-        placeholder="Enter a destination"
-        autocomplete="off"
-        autofocus="off"
-        id="city-input"/>
-        <input 
-        class="button"
-        type="submit" 
-        value="Go!"/>
-        </form>
-      </div>
-    </div>
-<br>
-    <div class="container">
-      <div class="clock">
-        <h3 id="localTime">Local Time:</h3>
-        <h3 id="destinationTime">Destination Time:</h3>
-      </div>
-    </div>
-<br>
-    <div class="container">
-      <div class="weather-app">
-        <row>
-          <div class="col">
-            <h2 id="city">Destination</h2>
-            <ul>
-              <li>
-                <span id="description"></span>
-              </li>
-              <li>
-                <span id="max-temp"> Max º /</span>
-                <span id="min-temp"> Min º
-                </span>
-              </li>
-              <li>
-                <span id="humidity">Humidity %</span>
-              </li>
-              <li>
-                <span id="feels-like">Feels like: º</span>
-              </li>
-            </ul>
-            </div>
-          <div class="col">
-            <div class="temperature-container">
-            <img src="" alt="" id="icon" width="100px">
-            <span class="temperature" id="temperature-now">?</span>
-            <span class="units"><a href="#" id="celsius-link" class="active">ºC</a> / <a href="#" id="fahrenheit-link" class="passive">ºF</a></span>
-          </div>
-        </div>        
-      </div>
-    </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Isa's Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto+Condensed&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+</head>
+
+<body>
   <br>
   <div class="container">
-      <div class="row">
-        <div class="col"><h4>Sun</h4> </div>
-        
-        <div class="col"><h4>Mon</h4></div>
-        
-        <div class="col"><h4>Tue</h4> </div>
-        
-        <div class="col"><h4>Wed</h4></div>
-        
-        <div class="col"><h4>Thu</h4></div>
-        </div>
-       <div class="row">
-        <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
-        <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
-        <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
-        <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
-        <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
-       </div>
-         <div class="row">
-        <div class="col">39º / 19º</div>
-        
-        <div class="col">40º / 20º</div>
-        
-        <div class="col">41º / 21º</div>
-        
-        <div class="col">42º / 22º</div>
-        
-        <div class="col">39º / 19º</div>
-      </div>      
+    <div class="search-field">
+      <h1>Welcome!</h1>
+      <form id="search-form">
+        <input type="search" placeholder="Enter a destination" autocomplete="off" autofocus="off" id="city-input" />
+        <input class="button" type="submit" value="Go!" />
+      </form>
     </div>
   </div>
-</div>
-<br>  
-  <div class="container">    
-    <a href="https://github.com/Isbernier/MyWeatherApp" target="blank"
-        class="link"
-        >Open-source code</a>
-        by
-    <a
-          href="https://www.linkedin.com/in/isbernier"
-          target="_blank"
-          class="link"
-          >Isabelle Bernier</a>
+  <br>
+  <div class="container">
+    <div class="clock">
+      <h3 id="localTime">Local Time:</h3>
+      <h3 id="destinationTime">Destination Time:</h3>
     </div>
-</div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <h2 id="city">Destination</h2>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="" alt="" id="icon" width="100px">
+        <span class="temperature" id="temperature-now">?</span>
+        <span class="units"><a href="#" id="celsius-link" class="active">ºC</a> / <a href="#" id="fahrenheit-link"
+            class="passive">ºF</a></span>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <span id="description"></span>
+          </li>
+          <li>
+            <span id="max-temp"> Max º /</span>
+            <span id="min-temp"> Min º
+            </span>
+          </li>
+          <li>
+            <span id="humidity">Humidity %</span>
+          </li>
+          <li>
+            <span id="feels-like">Feels like: º</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Sun</h4>
+      </div>
+
+      <div class="col">
+        <h4>Mon</h4>
+      </div>
+
+      <div class="col">
+        <h4>Tue</h4>
+      </div>
+
+      <div class="col">
+        <h4>Wed</h4>
+      </div>
+
+      <div class="col">
+        <h4>Thu</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
+      <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
+      <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
+      <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
+      <div class="col"><img src="images/sunny.png" alt="sunny" width="30px" /></div>
+    </div>
+    <div class="row">
+      <div class="col">39º / 19º</div>
+
+      <div class="col">40º / 20º</div>
+
+      <div class="col">41º / 21º</div>
+
+      <div class="col">42º / 22º</div>
+
+      <div class="col">39º / 19º</div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <div class="container">
+    <a href="https://github.com/Isbernier/MyWeatherApp" target="blank" class="link">Open-source code</a>
+    by
+    <a href="https://www.linkedin.com/in/isbernier" target="_blank" class="link">Isabelle Bernier</a>
+  </div>
+  </div>
 </body>
 <script src="project.js"></script>
+
 </html>
