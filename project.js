@@ -81,7 +81,7 @@ function showTemperature(response) {
     humidityElement.innerHTML = `Humidity: ${humidity}%`;
     let feelsLikeElement = document.querySelector("#feels-like");
     let feelsLike = Math.round(response.data.main.feels_like);
-    feelsLikeElement.innerHTML = `Feels like: ${feelsLike}º`;
+    feelsLikeElement.innerHTML = feelsLike;
     let temperatureElement = document.querySelector("#temperature-now");
     let temperature = Math.round(response.data.main.temp);
     temperatureElement.innerHTML = `${temperature}`;
@@ -106,20 +106,29 @@ function search(city) {
 function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
-    search(cityInputElement.value);
+    search(cityInputElement.value || "Madrid");
 }
+
+let isCelsius = true;
+
+const toFahrenheit = (t) => (t * 9) / 5 + 32;
 
 function showFahrenheitTemp(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature-now");
-    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+    if (!isCelsius) return;
+    isCelsius = false;
+    let temperatureElements = document.getElementsByClassName("tem");
+    for (let temperatureElement of temperatureElements) {
+        let celsiusTemp = parseInt(temperatureElement.innerHTML);
+        let fahrenheitTemp = toFahrenheit(celsiusTemp);
+        temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+    }
 }
 
 function showCelsiusTemp(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature-now");
-    temperatureElement.innerHTML = Math.round(celsiusTemp);
+    if (isCelsius) return;
+    isCelsius = true;
+    handleSubmit(event);
 }
 
 let celsiusTemp = null;
