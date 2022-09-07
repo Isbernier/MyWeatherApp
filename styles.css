@@ -39,6 +39,7 @@ h1 {
     color: white;
     font-size: 26px;
 }
+
 input::placeholder {
     border: 0;
     opacity: 1;
@@ -56,7 +57,7 @@ input {
     font-size: 16px;
     background: white;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 7px;
     border: 1px solid #636161;
     transition: all 200ms ease;
 }
@@ -113,6 +114,7 @@ li:first-letter {
 
 img {
     display: inline;
+    vertical-align: top;
 }
 
 .temperature {
@@ -125,8 +127,18 @@ img {
     font-size: 25px;
 }
 
-h4 {
+.weather-forecast {
+    margin-top: 20px;
+    text-align: center;
     color: white;
+}
+
+.weather-forecast-date {
+    font-size: 25px;
+}
+
+.weather-forecast-temp {
+    font-size: 20px;
 }
 
 a {
