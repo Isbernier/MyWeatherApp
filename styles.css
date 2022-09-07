@@ -25,6 +25,15 @@ body {
     color: lightblue;
     text-decoration: none;
 }
+.active:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.passive:hover {
+    color: yellow;
+    text-decoration: none;
+}
 
 h1 {
     color: white;
@@ -76,7 +85,7 @@ h3 {
 }
 
 #localTime {
-    color: greenyellow;
+    color: yellow;
     font-family: "Kiwi Maru", serif;
     font-size: 20px;
     display: block;
@@ -118,4 +127,13 @@ img {
 
 h4 {
     color: white;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightblue;
 }
