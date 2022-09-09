@@ -98,7 +98,7 @@ function showTemperature(response) {
     feelsLikeElement.innerHTML = feelsLike;
     let temperatureElement = document.querySelector("#temperature-now");
     let temperature = Math.round(response.data.main.temp);
-    temperatureElement.innerHTML = `${temperature}`;
+    temperatureElement.innerHTML = temperature;
     let iconElement = document.querySelector("#today-icon");
     iconElement.setAttribute(
         "src",

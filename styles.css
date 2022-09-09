@@ -16,28 +16,16 @@ body {
     background-color: #636161;
 }
 
-.active {
-    color: rgb(252, 111, 134);
-    text-decoration: none;
-}
-
-.passive {
-    color: lightblue;
-    text-decoration: none;
-}
-.active:hover {
-    color: yellow;
-    text-decoration: none;
-}
-
-.passive:hover {
-    color: yellow;
-    text-decoration: none;
-}
-
 h1 {
     color: white;
-    font-size: 26px;
+    font-size: 28px;
+}
+
+h2 {
+    color: white;
+    font-size: 22px;
+    text-align: right;
+    font-style: italic;
 }
 
 input::placeholder {
@@ -74,17 +62,6 @@ input {
     font-weight: bold;
 }
 
-h2 {
-    color: white;
-    font-size: 30px;
-}
-
-h3 {
-    color: white;
-    font-size: 20px;
-    display: inline;
-}
-
 #localTime {
     color: yellow;
     font-family: "Kiwi Maru", serif;
@@ -103,6 +80,12 @@ h3 {
     text-transform: capitalize;
 }
 
+h3 {
+    color: white;
+    font-size: 40px;
+    display: inline;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -118,13 +101,32 @@ img {
 }
 
 .temperature {
-    font-size: 60px;
+    font-size: 55px;
 }
 
 .units {
     position: relative;
     top: -25px;
     font-size: 25px;
+}
+
+.active {
+    color: rgb(252, 111, 134);
+    text-decoration: none;
+}
+
+.passive {
+    color: lightblue;
+    text-decoration: none;
+}
+.active:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.passive:hover {
+    color: yellow;
+    text-decoration: none;
 }
 
 #weather-forecast {
@@ -141,10 +143,14 @@ img {
 }
 
 a {
-    color: yellow;
+    color: lightblue;
     text-decoration: none;
 }
 
+.linkedin {
+    color: rgb(252, 111, 134);
+}
+
 a:hover {
-    color: lightblue;
+    color: yellow;
 }
